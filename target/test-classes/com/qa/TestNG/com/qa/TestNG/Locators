@@ -1,0 +1,45 @@
+1)Xpath means the address of a particular element,so in future if your Xpath gets changed,your relative XPATH would change.
+/html[1]/body[1]/table[1]/tbody[1]/tr[3]/td[1]/div[1]/div[1]/ul[1]/li[4]/a[1]--in future your path will change,then selenium won't be able to 
+locate the element on a page and will give you "Element NOt Found" exception.
+Relative Xpath is not recommended,instead you should use "Relative Xpath."
+
+2)Linktext is available with link and should be available within "a" tag.
+
+3)Partial Link text--is not recommended to use--is used in case of long link text,you can use partial link text---
+like "How to pick a great id".
+
+
+4)Class locator-Class name is not suitable or recommended because it can be duplicate.
+
+Priority would be:
+1)ID--in case ins ome complex applications,ID is getting changed,in that case ID won't work.--id is very fast because it will always be unique.
+2)Xpath and CSS(if it's relative,should not be absolute)
+3)Name--sometimes names might be duplicate,name is very fast
+
+
+Xpath is also fast but make sure it should be Relative XPATH,once you have 15000 lines of code,in that case you will be failed in some 
+of the test scripts.
+
+CSS Selectors-CSS are basically used to give look and Feel,giving some styles,combining HTML to define a CSS.
+CSS won't work for complex scenarios.
+driver.findElementBy.cssSelector("Give Path"));
+
+Xpath will work from parent to child,but CSS selector won't.
+
+You should be use href tag to locate the elements on the page,it's not recommended.
+
+Ways to Write XPATH:
+//input[@type='text' and @name='username']
+//a[contains(text(),'Features')]---by using contains--just make sure it will no search inside any attribute.
+ //a[text()='Features']--this is basically a XPATH of link features.
+ If there is more than 1 locators on the same name,exclude contains and use only text() method instead.
+ 
+ Dynamic XPATH---Forward direction.
+ //div[@class='dropdown']//button[@type='button' and @class='btn btn-secondary dropdown-toggle' and @id='dropdownMenuButton']
+//button[@id='dropdownMenuButton']
+
+++preceding-sibling:
+//a[text()='test2 test2']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input
+
+++parent & preceding-sibling:
+//a[text()='test2 test2']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']
