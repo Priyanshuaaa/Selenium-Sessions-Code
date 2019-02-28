@@ -13,7 +13,7 @@ public class LoginPage {
 	@FindBy(how = How.NAME, using = "password")
 	public WebElement password;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"loginForm\"]/div/div/inputxvvhvhfhdfkvdfvdgk")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"loginForm\"]/div/div/input")
 	public WebElement loginbtn;
 
 	@FindBy(how = How.CSS, using = ".navbar-brand > img:nth-child(1)")
