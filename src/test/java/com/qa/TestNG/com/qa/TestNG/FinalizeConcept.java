@@ -8,6 +8,8 @@ public class FinalizeConcept {
 	//finalize is a method which is used to clear out the garbage collection from JAVA memory
 	//like the objects which has no refrence,they will be clear out from mamory when garbage collector will be called to free some spce inside the memory.
 	//finalize is a methodis used to clean up the memory.
+	//finalize() method is a protected and non-static method of java.lang.Object class. 
+	//This method will be available in all objects you create in java. This method is used to perform some final operations or clean up operations on an object before it is removed from the memory.
 	
 	public static void main(String[] args) {
 
